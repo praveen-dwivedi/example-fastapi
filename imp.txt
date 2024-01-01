@@ -1,0 +1,13 @@
+virtual env -- create project and corresponding virtual env venv and then we can install dependency in that env
+
+to point to terminal venv\Scripts\activate.bat
+
+order of path opertor method matters
+
+Create -- POST -- /posts -- @app.post("/posts")
+Read -- GET -- /posts/:id -- @app.post("/posts/{id}")
+Read -- GET -- /posts -- @app.post("/posts")
+Update --PUT/PATCH --/posts/:id -- @app.put("/posts/{id})
+put - all the fieds for that id need to be passed
+patch -- only few fields for that id can be passed
+Delete -- DELETE -- /posts/:id -- @app.delete("/posts/{id}")
