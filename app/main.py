@@ -47,7 +47,7 @@ app.include_router(vote.router)
 
 @app.get("/") # decorator
 def root():
-    return {"message": "Welcome to my api!!!"}
+    return {"message": "Hello, welcome to my api!!!"}
 
 # # @app.get("/sqlalchemy")
 # # def test_post(db: Session = Depends(get_db)):
