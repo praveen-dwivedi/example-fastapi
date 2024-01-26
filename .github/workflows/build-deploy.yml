@@ -4,21 +4,30 @@ on: [push, pull_request]
 
 jobs:
     job1:
-        runs-on: ubuntu-latest
-        steps:
-            - name: pulling git repo
-              uses: actions/checkout@v2
-            - name: Install python version 3.9
-              uses: actions/setup-python@v2
-              with:
-                python-version: "3.9"
-            - name: Upgrade pip
-              run: python -m pip install --upgrade pip
-            - name: install all dependecices
-              run: pip install -r requirements.txt
-            - name: test with pytest
-              run: |
-                pip install pytest
-                pytest        
+      env:
+        DATABASE_HOSTNAME: localhost
+        DATABASE_PORT: 5432
+        DATABASE_PASSWORD: Aarav@2010
+        DATABASE_NAME: fastapi
+        DATABASE_USERNAME: postgres
+        SECRET_KEY: 5ccea7a8339f1f691caaa5f7a2d7810497a6074f86881313f7404d0d0786e490
+        ALGORITHM: HS256
+        ACCESS_TOKEN_EXPIRE_MINUTES: 60
+      runs-on: ubuntu-latest
+      steps:
+        - name: pulling git repo
+          uses: actions/checkout@v2
+        - name: Install python version 3.9
+          uses: actions/setup-python@v2
+          with:
+            python-version: "3.9"
+        - name: Upgrade pip
+          run: python -m pip install --upgrade pip
+        - name: install all dependecices
+          run: pip install -r requirements.txt
+        - name: test with pytest
+          run: |
+              pip install pytest
+              pytest        
 
 
