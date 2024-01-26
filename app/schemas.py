@@ -52,7 +52,7 @@ class Post(PostBase):
         from_attributes = True
         # orm_mode = True
 
-
+    
 
 class PostOut(BaseModel):
     Post: Post
