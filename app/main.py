@@ -47,7 +47,7 @@ app.include_router(vote.router)
 
 @app.get("/") # decorator
 def root():
-    return {"message": "Hello Explorers, welcome to amazing word of APIs!!!"}
+    return {"message": "Hello Explorers, welcome to amazing word of APIs, serving from cloud ubuntu"}
 
 # # @app.get("/sqlalchemy")
 # # def test_post(db: Session = Depends(get_db)):
