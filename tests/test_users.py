@@ -10,7 +10,7 @@ from app.config import settings
 def test_root(client, session):
     res = client.get("/")
     # print(res.json().get("message"))
-    assert res.json().get("message") == "Hello Explorers, welcome to amazing word of APIs"
+    assert res.json().get("message") == "Hello Explorers, welcome to amazing word of APIs!!!"
     assert res.status_code == 200
 
 
